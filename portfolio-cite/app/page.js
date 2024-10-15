@@ -38,25 +38,30 @@ export default function Home() {
   elements.forEach(el => observer.observe(el));
 
   return () => {
-    if (elements) elements.forEach(el => observer.unobserve(el));
+    if (elements && elements.length > 0){
+      if (elements) elements.forEach(el => observer.unobserve(el));
+    }
   };
 }, []);
 
   return (
     <div>
-      <nav className = {styles.navbar}>
-        <ul>
-          <li>
-            <Link href='/projects'>Works</Link>
-          </li>
-          <li>
-            <Link href='/about'>About</Link>
-          </li>
-          <li>
-            <Link href='/contact'>Contact</Link>
-          </li>
-        </ul>
-      </nav>
+      <header className={styles.siteHeader}>
+        <h1 className={styles.siteLogo}><img src = "favicon.ico"/></h1>
+        <nav className = {styles.navbar}>
+          <ul>
+            <li>
+              <Link href='/projects'>Works</Link>
+            </li>
+            <li>
+              <Link href='/about'>About</Link>
+            </li>
+            <li>
+              <Link href='/contact'>Contact</Link>
+            </li>
+          </ul>
+        </nav>
+      </header>
       <h1 className = {styles.title}>MyPortfolio</h1>
       <section ref = {galleryRef} className = {styles.gallery}>
         {projects.map((project) => (

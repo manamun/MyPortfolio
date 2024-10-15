@@ -6,6 +6,7 @@
     align-items: center;
     text-align: center;
     font-size:  3rem;
+    color: #2B2721
   }
   
   .show {
@@ -17,16 +18,30 @@
     opacity: 0;
     transform: translateY(100px);
   }
+
+  .siteLogo img{
+    height: 20px;
+    width: auto;
+  }
   
+  .siteHeader {
+    padding: 60px 20px;
+    background: #fff;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    width: 100%;
+  }
+
   .navbar {
-    padding: 10px;
+    display: flex;
   }
   
   .navbar ul {
     display: flex;
     list-style: none;
-    margin: 0;
-    padding: 0;
+    margin: 10px;
+    padding: 10px;
     justify-content: flex-end;
   }
   
@@ -36,7 +51,7 @@
   }
   
   .navbar ul li a {
-    color: rgb(155, 114, 114);
+    color: #2B2721;
     text-decoration: none;
     font-size: 30px;
     transition: color 0.3s ease;
