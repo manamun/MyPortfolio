@@ -2,6 +2,8 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitter, faInstagram, faGithub, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import {useEffect, useRef} from 'react';
 import styles from './page.module.css';
 
@@ -9,13 +11,7 @@ export default function Home() {
   const projects = [
     {id: 1, title: 'Project1', image: '/images/sample03.jpg', page: '/projects/project1'},
     {id: 1, title: 'Project2', image: '/images/sample03.jpg', page: '/projects/project1'},
-    {id: 1, title: 'Project3', image: '/images/sample03.jpg', page: '/projects/project1'},
-    {id: 1, title: 'Project4', image: '/images/sample03.jpg', page: '/projects/project1'},
-    {id: 1, title: 'Project5', image: '/images/sample03.jpg', page: '/projects/project1'},
-    {id: 1, title: 'Project6', image: '/images/sample03.jpg', page: '/projects/project1'},
-    {id: 1, title: 'Project7', image: '/images/sample03.jpg', page: '/projects/project1'},
-    {id: 1, title: 'Project8', image: '/images/sample03.jpg', page: '/projects/project1'},
-    {id: 1, title: 'Project9', image: '/images/sample03.jpg', page: '/projects/project1'}
+    {id: 1, title: 'Project3', image: '/images/sample03.jpg', page: '/projects/project1'}
   ];
 
   const galleryRef = useRef(null);
@@ -47,7 +43,6 @@ export default function Home() {
   return (
     <div>
       <header className={styles.siteHeader}>
-        <h1 className={styles.siteLogo}><img src = "favicon.ico"/></h1>
         <nav className = {styles.navbar}>
           <ul>
             <li>
@@ -62,7 +57,7 @@ export default function Home() {
           </ul>
         </nav>
       </header>
-      <h1 className = {styles.title}>MyPortfolio</h1>
+      <h1 className = {styles.title}>Manamun's Portfolio</h1>
       <section ref = {galleryRef} className = {styles.gallery}>
         {projects.map((project) => (
         <Link href ={project.page} key={project.id}>
@@ -78,6 +73,17 @@ export default function Home() {
           </div>
         </Link>
       ))}</section>
+      <footer className = {styles.footer}>
+        <a href='https://twitter.com/manamun_prog' target='_blank' rel='noopener noreferrer'>
+          <FontAwesomeIcon icon={faXTwitter}/>
+        </a>
+        <a href='https://www.instagram.com/Username_ld' target='_blank' rel='noopener noreferrer'>
+          <FontAwesomeIcon icon={faInstagram}/>
+        </a>
+        <a href='https://github.com/manamun' target='_blank' rel='noopener noreferrer'>
+          <FontAwesomeIcon icon={faGithub}/>
+        </a>
+      </footer>
     </div>
   );
 }

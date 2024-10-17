@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
   .title {
     height: 100vh;
@@ -6,7 +7,9 @@
     align-items: center;
     text-align: center;
     font-size:  3rem;
-    color: #2B2721
+    font-family: 'Caveat', cursive;
+    color: #2B2721;
+    margin: 0;
   }
   
   .show {
@@ -25,12 +28,12 @@
   }
   
   .siteHeader {
-    padding: 60px 20px;
-    background: #fff;
     display: flex;
     position: fixed;
-    justify-content: space-between;
+    justify-content: flex-end;
     width: 100%;
+    background-color: #446E72;
+    z-index: 2;
   }
 
   .navbar {
@@ -47,14 +50,19 @@
   
   .navbar li {
     margin-right: 20px;
-    font-family: 'Alegreya Sans SC', sans-serif;
+    margin-left: 20px;
+    font-family: 'Caveat', cursive;
   }
   
   .navbar ul li a {
     color: #2B2721;
     text-decoration: none;
-    font-size: 30px;
-    transition: color 0.3s ease;
+    font-size: 35px;
+    transition: color 0.5s ease;
+  }
+
+  .navbar li :hover{
+    color: white;
   }
   
   .gallery {
@@ -97,6 +105,30 @@
     border-radius: 10px;
     font-size: 1.2em;
   }
+
+  .footer {
+    background-color: #446E72;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .footer a {
+    color: white;
+    margin: 0 15px;
+    font-size: 2rem;
+    transition: color 0.5s ease;
+  }
+
+  .footer a :hover {
+    color: black;
+  }
+
+  .footer a[href*="instagram"] :hover {
+    color: #E1306C;
+  }
+
   
   @media (max-width: 1200px) {
     .gallery {
