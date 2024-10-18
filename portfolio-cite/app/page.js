@@ -29,7 +29,6 @@ export default function Home() {
     {threshold: 0.1}
   );
 
-
   const elements = document.querySelectorAll(`.${styles.galleryItem}.${styles.hidden}`);
   elements.forEach(el => observer.observe(el));
 
@@ -43,6 +42,11 @@ export default function Home() {
   return (
     <div>
       <header className={styles.siteHeader}>
+        <div className={styles.siteLogo}>
+          <Link href='/projects'>
+            <img src='favicon.ico' alt='WEBICON'/>
+          </Link>
+        </div>
         <nav className = {styles.navbar}>
           <ul>
             <li>

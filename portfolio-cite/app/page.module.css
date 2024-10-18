@@ -22,15 +22,21 @@
     transform: translateY(100px);
   }
 
+  .siteLogo{
+    display: flex;
+    align-items: center;
+  }
+
   .siteLogo img{
-    height: 20px;
-    width: auto;
+    height: 40px;
+    margin: 10px;
+    padding: 10px;
   }
   
   .siteHeader {
     display: flex;
     position: fixed;
-    justify-content: flex-end;
+    justify-content: space-between;
     width: 100%;
     background-color: #446E72;
     z-index: 2;
