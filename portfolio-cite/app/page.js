@@ -9,9 +9,9 @@ import styles from './page.module.css';
 
 export default function Home() {
   const projects = [
-    {id: 1, title: 'Project1', image: '/images/sample03.jpg', page: '/projects/project1'},
-    {id: 1, title: 'Project2', image: '/images/sample03.jpg', page: '/projects/project1'},
-    {id: 1, title: 'Project3', image: '/images/sample03.jpg', page: '/projects/project1'}
+    {id: 1, title: 'Work1', image: '/images/sample03.jpg', page: '/works/bachel'},
+    {id: 1, title: 'Work2', image: '/images/sample03.jpg', page: '/works/project1'},
+    {id: 1, title: 'Work3', image: '/images/sample03.jpg', page: '/works/project1'}
   ];
 
   const galleryRef = useRef(null);
@@ -43,14 +43,14 @@ export default function Home() {
     <div>
       <header className={styles.siteHeader}>
         <div className={styles.siteLogo}>
-          <Link href='/projects'>
+          <Link href='/works'>
             <img src='favicon.ico' alt='WEBICON'/>
           </Link>
         </div>
         <nav className = {styles.navbar}>
           <ul>
             <li>
-              <Link href='/projects'>Works</Link>
+              <Link href='/works'>Works</Link>
             </li>
             <li>
               <Link href='/about'>About</Link>
