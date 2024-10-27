@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faInstagram, faGithub, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import {useEffect, useRef} from 'react';
+import Footer from './components/Footer';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -77,17 +78,8 @@ export default function Home() {
           </div>
         </Link>
       ))}</section>
-      <footer className = {styles.footer}>
-        <a href='https://twitter.com/manamun_prog' target='_blank' rel='noopener noreferrer'>
-          <FontAwesomeIcon icon={faXTwitter}/>
-        </a>
-        <a href='https://www.instagram.com/Username_ld' target='_blank' rel='noopener noreferrer'>
-          <FontAwesomeIcon icon={faInstagram}/>
-        </a>
-        <a href='https://github.com/manamun' target='_blank' rel='noopener noreferrer'>
-          <FontAwesomeIcon icon={faGithub}/>
-        </a>
-      </footer>
+      <Footer />
+
     </div>
   );
 }
