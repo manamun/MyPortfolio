@@ -1,19 +1,12 @@
-"use client";
+"use client"
 
-import Image from 'next/image';
-import Link from 'next/link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faInstagram, faGithub, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import {useEffect, useRef} from 'react';
-import Footer from './components/Footer';
+import Footer from './components/Footer/Footer';
+import AboutMe from './components/Aboutme/Aboutme';
+import Works from './components/Works/Works';
 import styles from './page.module.css';
 
 export default function Home() {
-  const projects = [
-    {id: 1, title: 'Work1', image: '/images/sample03.jpg', page: '/works/bachel'},
-    {id: 1, title: 'Work2', image: '/images/sample03.jpg', page: '/works/project1'},
-    {id: 1, title: 'Work3', image: '/images/sample03.jpg', page: '/works/project1'}
-  ];
 
   const galleryRef = useRef(null);
 
@@ -42,44 +35,9 @@ export default function Home() {
 
   return (
     <div>
-      <header className={styles.siteHeader}>
-        <div className={styles.siteLogo}>
-          <Link href='/works'>
-            <img src='favicon.ico' alt='WEBICON'/>
-          </Link>
-        </div>
-        <nav className = {styles.navbar}>
-          <ul>
-            <li>
-              <Link href='/works'>Works</Link>
-            </li>
-            <li>
-              <Link href='/about'>About</Link>
-            </li>
-            <li>
-              <Link href='/contact'>Contact</Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <h1 className = {styles.title}>Manamun's Portfolio</h1>
-      <section ref = {galleryRef} className = {styles.gallery}>
-        {projects.map((project) => (
-        <Link href ={project.page} key={project.id}>
-          <div className={`${styles.galleryItem} ${styles.hidden}`}>
-            <Image
-              src = {project.image}
-              alt = {project.title}
-              width = {400}
-              height = {300}
-              className={styles.image}
-            />
-            <h3 className={styles.worktitle}>{project.title}</h3>
-          </div>
-        </Link>
-      ))}</section>
+      <AboutMe/>
+      <Works />
       <Footer />
-
     </div>
   );
 }
