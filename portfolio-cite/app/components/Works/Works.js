@@ -9,7 +9,7 @@ export default function Works() {
           image: '/images/BachelorSystem.jpg',
           title: '運動軌道計測システム',
           description: '学部時代の卒業論文で作成したシステムです．3DSystems社の"Phantom Premium 1.5HF"を使用しており，到達運動時の手先の運動軌道・力のプロファイルを取得できます．',
-          githubLink: 'https://github.com/manamun',
+          githubLink: 'https://github.com/manamun/Thesis-experiment-move-condition-',
         },
         {
           image: '/images/WebCite.jpg',
