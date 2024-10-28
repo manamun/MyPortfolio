@@ -1,5 +1,6 @@
 import { Box, Grid2} from '@mui/material';
 import WorkCard from '../WorkCard/WorkCard';
+import FadeIn from '../FadeIn/FadeIn';
 
 export default function Works() {
 
@@ -19,30 +20,32 @@ export default function Works() {
       ];
 
       return (
-        <Box
-        sx={{
-            display: "flex",
-            justifyContent: "center",
-        }}>
-            <Box 
-                sx={{
-                flexGrow: 1, 
-                padding: 2,
-                maxWidth: "900px",
+        <FadeIn>
+            <Box
+            sx={{
+                display: "flex",
+                justifyContent: "center",
             }}>
-                <Grid2 container spacing={6} justifyContent="center">
-                    {works.map((work, index) => (
-                        <Grid2 item xs={12} sm={6} md={4} key={index} >
-                            <WorkCard
-                                image={work.image}
-                                title={work.title}
-                                description={work.description}
-                                githubLink={work.githubLink}
-                            />
-                        </Grid2>
-                    ))}
-                </Grid2>
+                <Box 
+                    sx={{
+                    flexGrow: 1, 
+                    padding: 2,
+                    maxWidth: "900px",
+                }}>
+                    <Grid2 container spacing={6} justifyContent="center">
+                        {works.map((work, index) => (
+                            <Grid2 item xs={12} sm={6} md={4} key={index} >
+                                <WorkCard
+                                    image={work.image}
+                                    title={work.title}
+                                    description={work.description}
+                                    githubLink={work.githubLink}
+                                />
+                            </Grid2>
+                        ))}
+                    </Grid2>
+                </Box>
             </Box>
-        </Box>
+        </FadeIn>
       );
 }
