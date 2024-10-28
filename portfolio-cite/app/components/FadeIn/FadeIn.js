@@ -3,7 +3,7 @@
 import React, {useRef, useEffect, useState} from "react";
 import { Box } from "@mui/material";
 
-export default function({children}){
+export default function FadeIn({children}){
     const[isVisible, setIsVisible] = useState(false);
     const ref = useRef();
 

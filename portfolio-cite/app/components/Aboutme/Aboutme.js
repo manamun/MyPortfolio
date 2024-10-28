@@ -45,7 +45,7 @@ export default function AboutMe() {
                             fontFamily="system-ui"
                             letterSpacing={-2}
                         >
-                            Manamun's Portfolio
+                            Manamun`s Portfolio
                         </Typography>
                         <Typography 
                             variant="body1"
