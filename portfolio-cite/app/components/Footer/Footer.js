@@ -1,13 +1,10 @@
 
 import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { faGithub, faInstagram, faXTwitter } from "@fortawesome/free-brands-svg-icons";
-import { library } from "@fortawesome/fontawesome-svg-core";
-library.add(faXTwitter);
-library.add(faGithub);
-library.add(faInstagram);
+import GitHubIcon from '@mui/icons-material/GitHub';
+import XIcon from '@mui/icons-material/X';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 export default function Footer() {
     return(
@@ -30,10 +27,12 @@ export default function Footer() {
                     color: "white",
                     margin: "0 15px",
                     fontSize: "2rem",
-                    // transition: "color 0.5s ease",
-                    // "&:hover": {color: "black"}
+                    display: "flex",
+                    alignContent: "center",
+                    transition: "color 0.5s ease",
+                    "&:hover": {color: "black"}
                 }}>
-                <FontAwesomeIcon icon={faXTwitter}/>
+                <XIcon fontSize="Large"/>
             </Link>
             <Link 
                 href="https://www.instagram.com/Username_ld"
@@ -43,10 +42,12 @@ export default function Footer() {
                     color: "white",
                     margin: "0 15px",
                     fontSize: "2rem",
-                    // transition: "color 0.5s ease",
-                    // "&:hover": {color: "#E1306C"}
+                    display: "flex",
+                    alignContent: "center",
+                    transition: "color 0.5s ease",
+                    "&:hover": {color: "#E1306C"}
                 }}>
-                <FontAwesomeIcon icon={faInstagram}/>
+                <InstagramIcon fontSize="Large"/>
             </Link>
             <Link
                 href="https://github.com/manamun"
@@ -56,10 +57,12 @@ export default function Footer() {
                     color: "white",
                     margin: "0 15px",
                     fontSize: "2rem",
-                    // transition: "color 0.5s ease",
-                    // "&:hover": {color: "black"}
+                    display: "flex",
+                    alignContent: "center",
+                    transition: "color 0.5s ease",
+                    "&:hover": {color: "black"}
                 }}>
-                <FontAwesomeIcon icon={faGithub}/>
+                <GitHubIcon fontSize="Large"/>
             </Link>
         </Box>
         </>
