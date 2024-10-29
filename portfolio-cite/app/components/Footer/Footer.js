@@ -25,8 +25,8 @@ export default function Footer() {
                     color: "white",
                     margin: "0 15px",
                     fontSize: "2rem",
-                    transition: "color 0.5s ease",
-                    "&:hover": {color: "black"}
+                    // transition: "color 0.5s ease",
+                    // "&:hover": {color: "black"}
                 }}>
                 <FontAwesomeIcon icon={faXTwitter}/>
             </Link>
@@ -38,8 +38,8 @@ export default function Footer() {
                     color: "white",
                     margin: "0 15px",
                     fontSize: "2rem",
-                    transition: "color 0.5s ease",
-                    "&:hover": {color: "#E1306C"}
+                    // transition: "color 0.5s ease",
+                    // "&:hover": {color: "#E1306C"}
                 }}>
                 <FontAwesomeIcon icon={faInstagram}/>
             </Link>
@@ -51,8 +51,8 @@ export default function Footer() {
                     color: "white",
                     margin: "0 15px",
                     fontSize: "2rem",
-                    transition: "color 0.5s ease",
-                    "&:hover": {color: "black"}
+                    // transition: "color 0.5s ease",
+                    // "&:hover": {color: "black"}
                 }}>
                 <FontAwesomeIcon icon={faGithub}/>
             </Link>

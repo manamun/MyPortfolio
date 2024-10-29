@@ -4,7 +4,6 @@ import Grid2 from "@mui/material/Grid2";
 import Typography from "@mui/material/Typography";
 import React from "react";
 import SkillsList from "./SkillList/SkillList";
-import MyIcon from "./Icon.png";
 
 export default function AboutMe() {
     return (
@@ -20,17 +19,21 @@ export default function AboutMe() {
         >
             <Grid2 container spacing={2} 
                     sx={{
+                        display: "flex",
                         justifyContent: "center",
                     }}>
-                <Grid2 item xs={12} md={6} maxWidth="400px">
-                    <Image
-                        src = {MyIcon}
-                        alt="My Icon"
+                <Grid2  xs={12} md={6} maxWidth="400px">
+                    <Box
                         sx = {{
-                            width: "100%",
-                            height: "auto"
-                        }}
-                    />
+                            display: "flex",
+                            justifyContent: "center"
+                    }}>
+                        <img 
+                            src="./images/Icon.png"
+                            alt="My Icon"
+                            height="300"
+                        />
+                    </Box>
                         <Typography 
                             variant="h4" 
                             component="h1" 
@@ -64,7 +67,6 @@ export default function AboutMe() {
                         </Typography>
                 </Grid2>
                 <Grid2 
-                    item
                     xs={12}
                     md={6}
                     sx={{
