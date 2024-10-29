@@ -20,6 +20,7 @@ export default function Works() {
       ];
 
       return (
+        // <FadeIn>
             <Box
             sx={{
                 display: "flex",
@@ -45,5 +46,6 @@ export default function Works() {
                     </Grid2>
                 </Box>
             </Box>
+        // </FadeIn>
       );
 }
