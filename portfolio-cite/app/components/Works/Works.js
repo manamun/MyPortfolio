@@ -1,4 +1,4 @@
-import { Box, Grid2} from '@mui/material';
+import { Box, Grid2, Typography} from '@mui/material';
 import WorkCard from '../WorkCard/WorkCard';
 import FadeIn from '../FadeIn/FadeIn';
 
@@ -13,18 +13,41 @@ export default function Works() {
         },
         {
           image: './images/WebCite.jpg',
-          title: 'My Portfolio Cite',
-          description: 'このサイト自体です．自分自身のスキルや作品について知ってもらうためのサイトです．Github Pagesの仕様で静的ですが，これからもアップデートしていく予定です．',
+          title: 'My Portfolio Page',
+          description: 'このページ自体です．自分自身のスキルや作品について知ってもらうためのページです．Github Pagesの仕様で静的ですが，これからもアップデートしていく予定です．',
           githubLink: 'https://github.com/manamun/MyPortfolio',
         },
       ];
 
       return (
-        // <FadeIn>
+        //Fadeinにすることも可能
+        <>
             <Box
             sx={{
                 display: "flex",
                 justifyContent: "center",
+            }}>                                       
+                <Typography 
+                    variant="h4" 
+                    component="h1" 
+                    gutterBottom
+                    sx={{
+                        maxWidth: "400px",
+                        width: "400px",
+                        display: "flex",
+                        justifyContent: "center",
+                    }}
+                    fontFamily="system-ui"
+                    fontWeight="fontWeightBold" 
+                >
+                    Works
+                </Typography>
+            </Box>
+            <Box
+            sx={{
+                display: "flex",
+                justifyContent: "center",
+                paddingBottom: 10
             }}>
                 <Box 
                     sx={{
@@ -46,6 +69,6 @@ export default function Works() {
                     </Grid2>
                 </Box>
             </Box>
-        // </FadeIn>
+        </>
       );
 }

@@ -1,30 +1,37 @@
 import React from 'react';
 import { Box, Typography, List, ListItem } from '@mui/material';
+import StarIcon from '@mui/icons-material/Star';
+import StarBorderIcon from '@mui/icons-material/StarBorder';
 
-const languages = ['Python', 'JavaScript', 'HTML', 'CSS', 'TypeScript', 'C/C++', 'C#'];
+const languageProficiency = {
+    Python: 3,
+    JavaScript: 3,
+    HTML: 3,
+    CSS: 2,
+    TypeScript: 1,
+    Unity : 3,
+    Unity: 2,
+  };
 const frameworks = ['React', 'Next'];
-const tools = ['GitHub', 'Figma', 'Discord', 'VSCode'];
+const tools = ['GitHub', 'Figma', 'VSCode'];
 
 export default function SkillsList() {
   return (
-    <Box 
-    sx={{
-        marginLeft: 4,
-        }}>
+    <Box>
         <Typography 
         variant="h4" 
         component="h1" 
         gutterBottom
         sx={{
             maxWidth: "400px",
-            width: "400px",
             display: "flex",
             justifyContent: "center",
+            marginTop: 3,
         }}
         fontFamily="system-ui"
         fontWeight="fontWeightBold" 
         >
-            My Skills
+            Skills
         </Typography>
         <Typography variant="h5" component="h2" gutterBottom fontFamily="system-ui" fontWeight="fontWeightBold">
             Program Language
@@ -35,9 +42,19 @@ export default function SkillsList() {
             columns: 2,
             alignItems: "flex-start"
         }}>
-            {languages.map((language, index) => (
-                <ListItem key={index} sx={{padding: 0}}>
+            {Object.entries(languageProficiency).map(([language,level]) => (
+                <ListItem key={language} sx={{padding: 0}}>
                     <Typography variant="body1" fontFamily="system-ui">{language}</Typography>
+                    {[...Array(level)].map((_, index) => (
+                        <>
+                        <StarBorderIcon fontSize='verysmall' key={index}/>
+                        </>
+                    ))}
+                    {[...Array(5-level)].map((_, index) => (
+                        <>
+                        <StarBorderIcon fontSize='verysmall' key={index} sx={{color: "white"}}/>
+                        </>
+                    ))}
                 </ListItem>
             ))}
         </List>
