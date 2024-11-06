@@ -19,6 +19,12 @@ export default function WorkCard({ image, title, description, githubLink }) {
               height="150"
               image={image}
               alt={title}
+              sx={{
+                width: '200px',
+                height: '150px',
+                display: "block",
+                margin: "auto"
+              }}
             />
             <CardContent>
               <Typography gutterBottom variant="h6" component="div" fontFamily="system-ui">

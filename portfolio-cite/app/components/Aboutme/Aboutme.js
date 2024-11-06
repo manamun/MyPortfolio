@@ -23,11 +23,20 @@ export default function AboutMe() {
                 display: "flex",
                 justifyContent: "center",
                 flexDirection: "column",
+                
             }}>
-            <img 
+            <Image 
                 src="./images/Icon.png"
                 alt="My Icon"
-                height="400"
+                height="300"
+                width="300"
+                style={{
+                    display: "block",
+                    margin: "auto",
+                    marginTop: 20
+                }}
+                
+                
             />
         <Typography 
             variant="h3" 
@@ -134,7 +143,7 @@ export default function AboutMe() {
                             </ListItem>
                             <ListItem disablePadding>
                             <Typography variant="body1" fontFamily="system-ui">
-                                2024年4月 応用情報技術者試験 午後58点で不合格<br/>
+                                2024年4月 応用情報技術者試験 午後58点不合格<br/>
                                 ~ ついに本気を出し，勉強したが撃沈<br/>
                                 ~ 次回に期待
                             </Typography>
